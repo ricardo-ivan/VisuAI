@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIS/PACS Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i> Órdenes de estudio <span class="badge">2</span></a></li>
+                    <li><a href="#"><i class="fas fa-images"></i> Gestor de imágenes</a></li>
+                </ul>
+            </nav>
+            <button class="add-button"><i class="fas fa-plus"></i> Agregar</button>
+            
+        </header>
+
+        <section class="filter-section">
+            <div class="filter-group">
+                <label for="search-general">Búsqueda general</label>
+                <div class="search-input-group">
+                    <input type="text" id="search-general" placeholder="Nombre o No de orden">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="establecimiento">Establecimiento</label>
+                <select id="establecimiento">
+                    <option>UNIDAD MEDICA NO ESPECIFICA</option>
+                    <option>Opción 2</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="estudio">Estudio</label>
+                <select id="estudio">
+                    <option>TODOS</option>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="medico-asignado">Médico asignado</label>
+                <select id="medico-asignado">
+                    <option>TODOS</option>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="estatus">Estatus</label>
+                <select id="estatus">
+                    <option>TODOS</option>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+
+            <div class="filter-group date-filter-group">
+                <label for="fecha-admision">Fecha de admisión</label>
+                <div class="date-range-input">
+                    <input type="text" id="fecha-admision" value="27/07/2025 - 27/07/2025">
+                    <button><i class="fas fa-calendar-alt"></i></button>
+                    <button><i class="fas fa-caret-down"></i></button>
+                </div>
+            </div>
+
+            <div class="search-table-group">
+                <label for="search-table">Buscar:</label>
+                <input type="text" id="search-table" placeholder="Búsqueda en la tabla">
+            </div>
+        </section>
+
+        <section class="table-section">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Orden</th>
+                        <th>IMG</th>
+                        <th>PDF</th>
+                        <th>NOT</th>
+                        <th>Nombre del paciente</th>
+                        <th>Fecha de admisión</th>
+                        <th>Estudio</th>
+                        <th>Procedencia</th>
+                        <th>Registrado por</th>
+                        <th>Establecimiento de toma</th>
+                        <th>Prioridad</th>
+                        <th>Médico asignado</th>
+                        <th>Estatus</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>58785</td>
+                        <td><i class="fas fa-image"></i></td>
+                        <td><i class="fas fa-file-pdf"></i></td>
+                        <td><i class="fas fa-bell"></i></td>
+                        <td>
+                            PACIENTE PACIENTE PRUEBA
+                            <div class="patient-details">
+                                <p>Edad: 9 Años | S: M | N: 10121226</p>
+                                <p>Consulta: 31121996</p>
+                            </div>
+                        </td>
+                        <td>18/07/2025<br>12:39 hrs.</td>
+                        <td>CIRUGIA (C3)<br>CIRUGIA<br><span class="label hospital">HOSPITAL</span></td>
+                        <td>Dx</td>
+                        <td>RUIZ PALLARES LUCERO<br>ESTEFANIA<br>TR: TALA</td>
+                        <td>UNIDAD MEDICA NO<br>ESPECIFICA (ICHSAL)</td>
+                        <td><span class="status-indicator green"></span> NORMAL</td>
+                        <td>MÉDICO NO<br>ASIGNADO</td>
+                        <td>REGISTRADO</td>
+                        <td>
+                            <button class="action-button edit-button"><i class="fas fa-edit"></i></button>
+                            <button class="action-button delete-button"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>58780</td>
+                        <td><i class="fas fa-image"></i></td>
+                        <td><i class="fas fa-file-pdf"></i></td>
+                        <td><i class="fas fa-bell"></i></td>
+                        <td>
+                            PACIENTE PACIENTE PRUEBA
+                            <div class="patient-details">
+                                <p>Edad: 9 Años | S: M | N: 10121226</p>
+                                <p>Consulta: 31121996</p>
+                            </div>
+                        </td>
+                        <td>18/07/2025<br>11:31 hrs.</td>
+                        <td>CIRUGIA (C3)<br>CIRUGIA<br><span class="label hospital">HOSPITAL</span></td>
+                        <td>Ap</td>
+                        <td>RUIZ PALLARES LUCERO<br>ESTEFANIA<br>TR: TALA</td>
+                        <td>UNIDAD MEDICA NO<br>ESPECIFICA (ICHSAL)</td>
+                        <td><span class="status-indicator green"></span> NORMAL</td>
+                        <td>MÉDICO NO<br>ASIGNADO</td>
+                        <td>REGISTRADO</td>
+                        <td>
+                            <button class="action-button edit-button"><i class="fas fa-edit"></i></button>
+                            <button class="action-button delete-button"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination-info">
+                <p>Mostrando registros del 1 al 2 de un total de 2 registros</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
