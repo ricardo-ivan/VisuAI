@@ -1,7 +1,7 @@
 :root {
    /* Dark Theme Variables */
    --background-color-dark: #000000;
-   --card-background-dark: #1e1e1e;
+   --card-background-dark: #000000;
    --text-color-dark: #e0e0e0;
    --border-color-dark: #333333;
    --input-background-dark: #2a2a2a;
@@ -9,7 +9,7 @@
    --button-hover-dark: #185ea8;
    --header-background-dark: #181818;
    --active-tab-background-dark: #2a2a2a;
-   --table-header-background-dark: #1e1e1e;
+   --table-header-background-dark: #000000;
    --table-row-hover-dark: #252525;
    --icon-color-dark: #b0b6be;
 
